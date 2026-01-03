@@ -6,7 +6,12 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
-  "privileged": true,
-  "options": {},
-  "schema": {}
+  "privileged": ["NET_ADMIN"],
+  "options": {
+    "ovpnfile": "client.ovpn"
+  },
+  "schema": {
+    "ovpnfile": "str"
+  },
+  "map" : ["share:rw"]
 }
