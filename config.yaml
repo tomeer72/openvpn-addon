@@ -1,1 +1,25 @@
-
+  name: OpenVPN Client
+  version: 1.0.5
+  slug: openvpn_client
+  description: OpenVPN Client
+  url: https://github.com/tomeer72/openvpn-addon
+  arch: 
+    - armhf
+    - armv7
+    - aarch64
+    - amd64
+    - i386
+  startup: application
+  boot: auto
+  host_network: true,
+  privileged: 
+    - NET_ADMIN
+  options: 
+    ovpnfile: "client.ovpn"
+  
+  schema: 
+    log_level: list(trace|debug|info|notice|warning|error|fatal)?
+    ovpnfile: str
+   
+  map : 
+    - share:rw
