@@ -4,7 +4,7 @@ set +u
 CONFIG_PATH=/data/options.json
 
 OVPNFILE="$(jq --raw-output '.ovpnfile' $CONFIG_PATH)"
-OPENVPN_CONFIG=/share/${OVPNFILE}
+OPENVPN_CONFIG=/config/${OVPNFILE}
 
 ########################################################################################################################
 # Initialize the tun interface for OpenVPN if not already available
