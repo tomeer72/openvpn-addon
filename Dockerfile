@@ -3,7 +3,7 @@ FROM alpine:latest
 
 # Zainstaluj OpenVPN
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add jq openvpn \
+    apk --no-cache --no-progress add jq openvpn && \
     rm -rf /tmp/*
 
 # Skopiuj plik konfiguracyjny
