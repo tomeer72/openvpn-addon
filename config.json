@@ -1,12 +1,12 @@
 {
-  name: OpenVPN Client
-  version: "1.0"
-  slug: openvpn-client
-  description: OpenVPN client for HAOS
-  startup: services
-  boot: auto
-  host_network: true
-  privileged: true
-  options: {}
-  schema: {}
+  "name": "OpenVPN Client",
+  "version": "1.0",
+  "slug": "openvpn-client",
+  "description": "OpenVPN client for HAOS",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": true,
+  "options": {},
+  "schema": {}
 }
