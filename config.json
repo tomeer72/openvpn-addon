@@ -12,8 +12,10 @@
   "options": {
     "ovpnfile": "client.ovpn"
   },
-  "schema": {
+  "schema": 
+    "log_level": list(trace|debug|info|notice|warning|error|fatal)?
     "ovpnfile": "str"
-  },
+  
+  ,
   "map" : ["share:rw"]
 }
