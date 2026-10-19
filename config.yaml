@@ -7,7 +7,7 @@
     - aarch64
   startup: system
   boot: auto
-  host_network: true
+  host_network: true,
   privileged: 
     - NET_ADMIN
   options: 
