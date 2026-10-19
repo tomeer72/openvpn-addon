@@ -7,9 +7,7 @@
     - armhf
     - armv7
     - aarch64
-    - amd64
-    - i386
-  startup: application
+  startup: system
   boot: auto
   host_network: true,
   privileged: 
