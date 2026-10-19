@@ -9,7 +9,7 @@ RUN apk --no-cache --no-progress upgrade && \
     rm -rf /tmp/*
 
 # Skopiuj plik konfiguracyjny
-COPY rootfs /
+#COPY rootfs /
 COPY run.sh /run.sh
 RUN /bin/chmod +x /run.sh
 WORKDIR /
