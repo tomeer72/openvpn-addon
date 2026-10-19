@@ -1,0 +1,19 @@
+{
+  "name": "OpenVPN Client",
+  "version": "1.0.6",
+  "slug": "openvpn_client",
+  "description": "OpenVPN Client",
+  "url": "https://github.com/tomeer72/openvpn-addon",
+  "arch": ["aarch64", "amd64"],
+  "startup": "application",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": ["NET_ADMIN"],
+  "options": {
+    "ovpnfile": "client.ovpn"
+  },
+  "schema": {
+    "ovpnfile": "str"
+  },
+  "map" : ["share:rw"]
+}
