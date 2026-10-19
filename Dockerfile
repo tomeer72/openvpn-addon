@@ -10,8 +10,8 @@ RUN apk --no-cache --no-progress upgrade && \
 
 # Skopiuj plik konfiguracyjny
 COPY rootfs /
-#COPY run.sh /run.sh
-#RUN /bin/chmod +x /run.sh
+COPY run.sh /run.sh
+RUN /bin/chmod +x /run.sh
 WORKDIR /
 # Komenda uruchamiająca OpenVPN z pliku konfiguracyjnego
 CMD ["/run.sh"]
