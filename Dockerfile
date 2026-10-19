@@ -1,5 +1,7 @@
 # Użyj obrazu Alpine z OpenVPN
-FROM alpine:latest
+#FROM alpine:latest
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Zainstaluj OpenVPN
 RUN apk --no-cache --no-progress upgrade && \
@@ -7,8 +9,10 @@ RUN apk --no-cache --no-progress upgrade && \
     rm -rf /tmp/*
 
 # Skopiuj plik konfiguracyjny
-COPY run.sh /run.sh
-RUN /bin/chmod +x /run.sh
-
+COPY rootfs /
+#COPY run.sh /run.sh
+#RUN /bin/chmod +x /run.sh
+WORKDIR /
 # Komenda uruchamiająca OpenVPN z pliku konfiguracyjnego
 CMD ["/run.sh"]
+
